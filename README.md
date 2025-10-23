@@ -4,11 +4,11 @@ Practicas de programación de primer semestre de biotecnología
 ![bot](https://github.com/user-attachments/assets/b5589fac-d5f9-4540-b878-220909aff27e)
 
 ## LIBRARYS 
-`#32a852library("nycflights13")#32a852`
+library("nycflights13")
 
-`#32a852library(tidyverse)#32a852`
+library(tidyverse)
 
-`#32a852library(dplyr)#32a852` 
+library(dplyr) 
 ```
 ## CODIGO
  vuelos_sel <- select(flights, year, month, day, carrier, dep_delay, arr_delay)
