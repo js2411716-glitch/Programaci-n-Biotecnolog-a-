@@ -3,46 +3,71 @@ Practicas de programación de primer semestre de biotecnología
 
 ![bot](https://github.com/user-attachments/assets/b5589fac-d5f9-4540-b878-220909aff27e)
 
-## LIBRARYS 
-library(nycflights13)
+## LIBRERIAS NECESARIAS
 
+ library(ggplot2)
+ 
+ library(pheatmap)
+
+
+## DATA FRAME PREEXISTENTE R
+
+iris
+
+##CODIGO
+```
+### REMOVER COLUMNAS DE UN DF
+
+df=subset(iris, select = -c(Sepal.Length,Sepal.Width))
+ View(df)
+ head(df)
+
+### SELECCIONAR SOLO ALGUNAS COLUMNAS DE UN DF
+
+df=subset(iris, select = c(Sepal.Length,Sepal.Width))
+ View(df)
+ head(df)
+ ggplot(iris, aes(x=Species, y=Sepal.Length)) +
+ geom_col()
+ a=ggplot(iris, aes(x=Species, y=Sepal.Length))
+ a+geom_boxplot()
+ a+geom_boxplot()
+ a+labs(x= "especies de plantas", y= "largo del sepalo")
+ a
+ a2=a+geom_boxplot()
+ a3=
+ a3=a2+labs(x= "especies de plantas", y= "largo del sepalo")
+ a3
+ a3+ theme_gray()
+ a3+ theme_dark()
+ ggplot(iris, aes(x=Species, y=Sepal.Length, fill = Species)) 
+ a4=ggplot(iris, aes(x=Species, y=Sepal.Length, fill = Species)) 
+ a4
+ a4+geom_boxplot()
+ a4=ggplot(iris, aes(x=Species, y=Sepal.Length, fill = Species, alpha = 0.3)) 
+ a4
+ View(a4)
+ View(a3)
+ View(a4)
+ a4=ggplot(iris, aes(x=Species, y=Sepal.Length, fill = Species, alpha =0.8)) 
+ a4
+ a4+geom_boxplot()
+ a4+ geom_jitter()
+ a5=a4+ geom_jitter()
+ a6=a4+ geom_violin()
+ a6
+ a7=a4+geom_jitter(color="black", size=0.4, alpha=0.9)
+ pheatmap(mtcars)
+ str(mtcars)
+ 
+#### CREATE HEATMAP
+iris2 =subset(iris, select = -c(Species))
+ iris2
+ m6=as.matrix(iris2)
+ heatmap(m6)
+
+#####INSTALL TIDYVERSE
+
+install.packages("tidyverse")
 library(tidyverse)
 
-library(dplyr)
-
-
-
-
-## CODIGO
-```
- vuelos_sel <- select(flights, year, month, day, carrier, dep_delay, arr_delay)
- View(vuelos_sel)
- f=flights
- f
- vuelos_retrasados_mas_de_una_hora = vuelos_sel %>% filter(dep_delay==-1)
- vuelos_retrasados_mas_de_una_hora
- str(vuelos_retrasados_mas_de_una_hora)
- vuelos_sel
- diferencia= vuelos_sel%>% mutate(c= arr_delay-dep_delay)
- diferencia
- diferencia= vuelos_sel%>% mutate(retrasos= arr_delay-dep_delay)
- diferencia
- retrasados= filter(flights, dep_delay > 60)
- retrasado= arrange(retrasados, desc(dep_delay))
- head(retrasado)
- tail(retrasado)
- df_ordenado <- retrasado[order(-retrasado$arr_delay), ]
- df_ordenado
- flights= mutate(flights, duracion_horas = air_time /60)
- resumen = flights %>%
- group_by(carrier) %>%
- summarise(Promedio_duracion = mean(duracion_horas, na.rm = TRUE), Promedio_retraso = mean(dep_delay, na.rm = TRUE))
- print(resumen)
- aeroretraso <- resumen[order(-resumen$Promedio_retraso), ]
- aeroretraso
- colnames(flights) <- toupper(colnames(flights))
- head(flights)
- nombres= c("año", "mes", "dia", "hora de salida", "hora programada", "retraso de salida", "hora de llegada")
- colnames(flights) = nombres
- flights
- View(flights)
