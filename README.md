@@ -4,7 +4,7 @@ Practicas de programación de primer semestre de biotecnología
 ![bot](https://github.com/user-attachments/assets/b5589fac-d5f9-4540-b878-220909aff27e)
 
 ## LIBRARYS 
-library("nycflights13") `#32a852`
+library("nycflights13") `rgb(R,G,B)`
 library(tidyverse) `#32a852`
 library(dplyr) `#32a852`
 ```
