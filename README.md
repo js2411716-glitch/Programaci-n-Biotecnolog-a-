@@ -9,6 +9,7 @@ Practicas de programación de primer semestre de biotecnología
  
  library(pheatmap)
 
+library(tidyverse)
 
 ## DATA FRAME PREEXISTENTE R
 
@@ -65,9 +66,3 @@ iris2 =subset(iris, select = -c(Species))
  iris2
  m6=as.matrix(iris2)
  heatmap(m6)
-
-#####INSTALL TIDYVERSE
-
-install.packages("tidyverse")
-library(tidyverse)
-
