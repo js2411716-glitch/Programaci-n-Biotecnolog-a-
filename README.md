@@ -9,8 +9,9 @@ library("nycflights13")
 library(tidyverse)
 
 library(dplyr) 
-```
+
 ## CODIGO
+```
  vuelos_sel <- select(flights, year, month, day, carrier, dep_delay, arr_delay)
  View(vuelos_sel)
  f=flights
