@@ -4,9 +4,10 @@ Practicas de programación de primer semestre de biotecnología
 ![bot](https://github.com/user-attachments/assets/b5589fac-d5f9-4540-b878-220909aff27e)
 
 ## LIBRARYS 
-`<span style="color:#32a852">library(nycflights13)</span>  
-<span style="color:#32a852">library(tidyverse)</span>  
-<span style="color:#32a852">library(dplyr)</span>`
+<font color="#32a852">library("nycflights13")</font><br>
+<font color="#32a852">library(tidyverse)</font><br>
+<font color="#32a852">library(dplyr)</font>
+
 
 
 ## CODIGO
